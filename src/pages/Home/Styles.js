@@ -9,6 +9,10 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     max-width: 768px; /* Aplicar largura máxima para tablets e acima */
+
+    .button-especial {
+      display: none;
+    }
   }
 
   @media (min-width: 1280px) {
@@ -21,6 +25,7 @@ export const Container = styled.div`
 export const Header = styled.header`
   text-align: center;
   margin-bottom: 20px;
+  margin: 0 auto;
 
   img {
     width: 320px;
@@ -28,6 +33,7 @@ export const Header = styled.header`
     border-radius: 15px;
     margin-top: 25px;
   }
+
 `;
 
 export const Button = styled.button`

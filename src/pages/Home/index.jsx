@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import Loading from '../../components/Loading'; // Importando o componente de loading
 
 const VideoCarousel = lazy(() => import('../../components/VideoCarousel'));
 const EventSchedule = lazy(() => import('../../components/EventSchedule'));
@@ -10,9 +11,6 @@ import banner from '../../assets/img/banner.webp';
 import logo from '../../assets/img/logo.webp';
 
 import * as S from './Styles';
-
-
-
 
 import video1 from '../../assets/videos/depoimento-01.mp4';
 import video2 from '../../assets/videos/depoimento-02.mp4';
@@ -27,7 +25,6 @@ import poster4 from '../../assets/videos/depoimento-04.webp';
 import poster5 from '../../assets/videos/depoimento-05.webp';
 import poster6 from '../../assets/videos/depoimento-06.webp';
 
-
 const videoSources = [
   { src: video1, poster: poster1 },
   { src: video2, poster: poster2 },
@@ -37,23 +34,23 @@ const videoSources = [
   { src: video6, poster: poster6 },
 ];
 
-
-
-
 const EventPage = () => {
   return (
     <S.Container>
+      <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
+        <S.Button className='button-especial'>Garantir Vaga !</S.Button>
+      </a>
       <S.Header>
-        <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
-          <S.Button>Garantir Vaga !</S.Button>
-        </a>
-        <img src={banner} alt="banner da página" loading="lazy" />
+        <Suspense fallback={<Loading />}>
+          <img src={banner} alt="banner da página" loading="lazy" />
+        </Suspense>
       </S.Header>
       <S.ImageContainer>
         <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
           <S.Button>Garantir Vaga !</S.Button>
         </a>
       </S.ImageContainer>
+      <Suspense fallback={<Loading />}>
       <S.Section>
         <S.SubTitle>O que você vai aprender nesse evento?</S.SubTitle>
         <S.List>
@@ -68,31 +65,32 @@ const EventPage = () => {
           <S.Button>Garantir Vaga !</S.Button>
         </a>
       </S.Section>
+      </Suspense>
       <S.Section>
         <S.SubTitle>Depoimentos de Alunos</S.SubTitle>
-        <Suspense fallback={<div>Carregando...</div>}>
+        <Suspense fallback={<Loading />}>
           <VideoCarousel videoSources={videoSources} />
         </Suspense>
         <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
           <S.Button>Garantir Vaga !</S.Button>
         </a>
       </S.Section>
-      <Suspense fallback={<div>Carregando...</div>}>
+      <Suspense fallback={<Loading />}>
         <EventSchedule />
       </Suspense>
       <S.Section>
         <S.SubTitle>Depoimentos de Alunos</S.SubTitle>
-        <Suspense fallback={<div>Carregando...</div>}>
+        <Suspense fallback={<Loading />}>
           <TestimonialsCarousel />
         </Suspense>
         <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
           <S.Button>Garantir Vaga !</S.Button>
         </a>
       </S.Section>
-      <Suspense fallback={<div>Carregando...</div>}>
+      <Suspense fallback={<Loading />}>
         <MentorSection />
       </Suspense>
-      <Suspense fallback={<div>Carregando...</div>}>
+      <Suspense fallback={<Loading />}>
         <InvestmentValueSection />
       </Suspense>
       <S.Footer>
