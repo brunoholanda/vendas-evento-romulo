@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, Suspense, lazy } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
@@ -20,7 +20,8 @@ import mentor from '../../assets/img/romulo.webp';
 import logo from '../../assets/img/logo.webp';
 
 import * as S from './Styles';
-import TestimonialsCarousel from '../../components/TestimonialsCarousel';
+
+const TestimonialsCarousel = lazy(() => import('../../components/TestimonialsCarousel'));
 
 const videoSources = [
   { src: video1, poster: poster1 },
@@ -32,6 +33,8 @@ const videoSources = [
 ];
 
 const EventPage = () => {
+
+  
   const swiperRef = useRef(null);
   const [playingVideoIndex, setPlayingVideoIndex] = useState(null); // Controla o índice do vídeo em reprodução
 
@@ -61,7 +64,7 @@ const EventPage = () => {
         <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
           <S.Button>Garantir Vaga !</S.Button>
         </a>
-        <img src={banner} alt="banner da pagina" />
+        <img src={banner} alt="banner da pagina" loading="lazy" />
       </S.Header>
 
       {/* Imagem do Evento */}
@@ -154,7 +157,9 @@ const EventPage = () => {
       {/* Depoimentos em Prints */}
       <S.Section>
         <S.SubTitle>Depoimentos de Alunos</S.SubTitle>
-        <TestimonialsCarousel />
+        <Suspense fallback={<div>Carregando...</div>}>
+          <TestimonialsCarousel />
+        </Suspense>
         <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
           <S.Button>Garantir Vaga !</S.Button>
         </a>
@@ -163,7 +168,7 @@ const EventPage = () => {
       {/* Mentor e História */}
       <S.MentorSection>
         <S.Name>Romulo Dantas</S.Name>
-        <S.MentorImage src={mentor} alt="Foto do Mentor" />
+        <S.MentorImage src={mentor} alt="Foto do Mentor" loading="lazy" />
         <S.MentorBio>
           Apaixonado por viagens! Ao longo dos anos, viajei de várias formas (sozinho, em casal, com amigos e família) e aprendi diversas estratégias para economizar em passagens, seja com dinheiro ou milhas, além de aproveitar os benefícios dos cartões de crédito para mais conforto.
           <span id="moreContent" style={{ display: 'none' }}>
@@ -189,9 +194,10 @@ const EventPage = () => {
           <S.Button>Garantir Vaga !</S.Button>
         </a>
       </S.MentorSection>
+      
+      {/* Valor do Investimento */}
       <S.Section>
         <S.SubTitle>Valor do Investimento</S.SubTitle>
-
         <S.LotesContainer>
           <S.LoteCard>
             <S.LoteTitle>🥇 1º Lote - Promoção Inicial</S.LoteTitle>
@@ -225,7 +231,7 @@ const EventPage = () => {
       </S.Section>
 
       <S.Footer>
-        <img src={logo} alt="logo nordestinos pelo mundo" />
+        <img src={logo} alt="logo nordestinos pelo mundo" loading="lazy" />
       </S.Footer>
     </S.Container>
   );
