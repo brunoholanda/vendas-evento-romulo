@@ -41,9 +41,7 @@ const EventPage = () => {
         <S.Button className='button-especial'>Garantir Vaga !</S.Button>
       </a>
       <S.Header>
-        <Suspense fallback={<Loading />}>
           <img src={banner} alt="banner da página" loading="lazy" />
-        </Suspense>
       </S.Header>
       <S.ImageContainer>
         <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
