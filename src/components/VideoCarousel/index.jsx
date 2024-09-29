@@ -48,7 +48,7 @@ const VideoCarousel = ({ videoSources }) => {
                 preload="metadata"
                 loading="lazy"
                 poster={video.poster} // Adiciona o poster para o vídeo
-                onClick={(e) => togglePlayPause(index, e.target)} // Controle do vídeo
+                playsInline 
               >
                 <source src={video.src} type="video/mp4" />
                 Seu navegador não suporta o elemento de vídeo.
