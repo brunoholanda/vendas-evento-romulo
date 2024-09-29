@@ -1,7 +1,6 @@
 import React from 'react';
 import * as S from './Styles'; // Ajuste o caminho conforme necessário
-import mentor from '../../assets/img/romulo-2.webp'; // Certifique-se de ajustar o caminho da imagem
-
+import mentor from '../../assets//img/Romulo-2.webp';
 const MentorSection = () => {
   const toggleReadMore = (e) => {
     e.preventDefault();
