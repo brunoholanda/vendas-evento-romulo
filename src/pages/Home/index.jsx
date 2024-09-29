@@ -16,7 +16,7 @@ import poster3 from '../../assets/videos/depoimento-03.webp';
 import poster4 from '../../assets/videos/depoimento-04.webp';
 import poster5 from '../../assets/videos/depoimento-05.webp';
 import poster6 from '../../assets/videos/depoimento-06.webp';
-import mentor from '../../assets/img/romulo.webp';
+import mentor from '../../assets/img/romulo-2.webp';
 import logo from '../../assets/img/logo.webp';
 
 import * as S from './Styles';
