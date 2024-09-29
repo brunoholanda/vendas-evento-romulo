@@ -23,7 +23,8 @@ export const Header = styled.header`
   margin-bottom: 20px;
 
   img {
-    width: 100%;
+    width: 320px;
+    height: 430px;
     border-radius: 15px;
     margin-top: 25px;
   }
