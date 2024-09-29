@@ -6,7 +6,7 @@ const MentorSection = lazy(() => import('../../components/MentorSection'));
 const InvestmentValueSection = lazy(() => import('../../components/InvestmentValueSection'));
 const TestimonialsCarousel = lazy(() => import('../../components/TestimonialsCarousel'));
 
-import banner from '../../assets/img/banner.jpg';
+import banner from '../../assets/img/banner.webp';
 import logo from '../../assets/img/logo.webp';
 
 import * as S from './Styles';
