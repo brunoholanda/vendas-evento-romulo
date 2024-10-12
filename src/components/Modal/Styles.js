@@ -60,7 +60,7 @@ export const ModalFooter = styled.div`
 export const BonusButton = styled.a`
   background-color: #ff5733;
   color: white;
-  padding: 12px 10px;
+  padding: 8px 10px;
   font-size: 1.2em;
   font-weight: bold;
   border-radius: 5px;

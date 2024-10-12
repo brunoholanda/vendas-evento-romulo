@@ -19,7 +19,7 @@ const Modal = ({ isOpen, onClose, imageSrc }) => {
           <S.BonusButton href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
             Garantir Bônus !
           </S.BonusButton>
-          <S.SmallCloseButton onClick={onClose}>Saiba mais...</S.SmallCloseButton>
+          <S.SmallCloseButton onClick={onClose}>Saiba mais</S.SmallCloseButton>
         </S.ModalFooter>
       </S.ModalContent>
     </S.ModalOverlay>
