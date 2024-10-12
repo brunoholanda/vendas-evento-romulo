@@ -7,7 +7,7 @@ const InvestmentValueSection = () => {
       <S.SubTitle>Valor do Investimento</S.SubTitle>
       <S.LotesContainer>
         <S.LoteCard>
-          <S.LoteTitle>🥇 1º Lote - Promoção Inicial</S.LoteTitle>
+          <S.LoteTitle>🥇 1º Lote - Até 03/11/2024</S.LoteTitle>
           <S.LotePrice>R$ 100,00</S.LotePrice>
           <S.LoteDetails>Vagas Limitadas - Garanta o menor preço!</S.LoteDetails>
           <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
@@ -16,7 +16,7 @@ const InvestmentValueSection = () => {
         </S.LoteCard>
 
         <S.LoteCard>
-          <S.LoteTitle>🥈 2º Lote - Preço Regular</S.LoteTitle>
+          <S.LoteTitle>🥈 2º Lote - Até 17/11/2024</S.LoteTitle>
           <S.LotePrice>R$ 120,00</S.LotePrice>
           <S.LoteDetails>Vagas ainda disponíveis. Não perca!</S.LoteDetails>
           <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
@@ -25,7 +25,7 @@ const InvestmentValueSection = () => {
         </S.LoteCard>
 
         <S.LoteCard>
-          <S.LoteTitle>🥉 3º Lote - Última Chance</S.LoteTitle>
+          <S.LoteTitle>🥉 3º Lote - Até 07/12/2024</S.LoteTitle>
           <S.LotePrice>R$ 140,00</S.LotePrice>
           <S.LoteDetails>Últimas vagas - Corra e garanta seu lugar!</S.LoteDetails>
           <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
