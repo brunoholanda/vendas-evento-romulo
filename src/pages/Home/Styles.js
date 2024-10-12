@@ -39,7 +39,7 @@ export const Header = styled.header`
 export const MedalImage = styled.img`
   position: absolute;
   top: 80px;
-  left: -20px;
+  left: -30px;
   width: 110px !important;  // Ajuste o tamanho da medalha conforme necessário
   height: 105px !important;
   z-index: 1;
