@@ -20,30 +20,13 @@ export const ModalContent = styled.div`
   border-radius: 8px;
   position: relative;
   text-align: center;
-  
+
   img {
     max-width: 100%;
     height: auto;
   }
-
-  button {
-    margin-top: 20px;
-    background: #f44336;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  button:first-child {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    color: black;
-  }
 `;
+
 
 
 export const ImageContainer = styled.div`
@@ -68,33 +51,76 @@ export const OverlayText = styled.div`
 export const ModalFooter = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 20px;
   border-top: 1px solid #e0e0e0;
   margin-top: 20px;
 `;
 
-export const HighlightButton = styled.button`
-  background-color: #ff5733; // Cor de destaque
-  border: none;
-  padding: 12px 25px;
-  cursor: pointer;
-  font-size: 1.1em;
+export const BonusButton = styled.a`
+  background-color: #ff5733;
+  color: white;
+  padding: 12px 40px;
+  font-size: 1.2em;
   font-weight: bold;
   border-radius: 5px;
-`;
-
-export const CloseButton = styled.button`
-  background: #e0e0e0;
-  color: #333;
-  border: none;
-  padding: 12px 25px;
+  text-decoration: none;
+  display: inline-block;
   cursor: pointer;
-  font-size: 1.1em;
-  font-weight: bold;
-  border-radius: 5px;
   transition: background 0.3s;
   
   &:hover {
-    background: #c0c0c0; // Cor ao passar o mouse
+    background-color: #ff3c1f;
+  }
+`;
+
+export const SmallCloseButton = styled.button`
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #c0c0c0;
+  }
+`;
+
+export const MedalButton = styled.a`
+  position: absolute;
+  top: 18px; // Ajuste a posição vertical
+  left: 72px; // Ajuste a posição horizontal
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff5733;
+  transform: translate(-50%, -50%) rotate(-20deg); // Posição central e rotação na diagonal
+
+
+  img {
+    width: 140px; // Ajuste o tamanho da medalha
+    height: 130px;
+    margin-right: 8px;
+  }
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #555; // Cor ao passar o mouse
   }
 `;

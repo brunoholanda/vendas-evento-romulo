@@ -26,6 +26,7 @@ export const Header = styled.header`
   text-align: center;
   margin-bottom: 20px;
   margin: 0 auto;
+  position: relative;
 
   img {
     width: 320px;
@@ -33,8 +34,20 @@ export const Header = styled.header`
     border-radius: 15px;
     margin-top: 25px;
   }
+`;
+
+export const MedalImage = styled.img`
+  position: absolute;
+  top: 80px;
+  left: -10px;
+  width: 110px !important;  // Ajuste o tamanho da medalha conforme necessário
+  height: 105px !important;
+  z-index: 1;
+  transform: rotate(-20deg); // Posição central e rotação na diagonal
+
 
 `;
+
 
 export const Button = styled.button`
   padding: 10px 20px;

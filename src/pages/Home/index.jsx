@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import Loading from '../../components/Loading'; // Importando o componente de loading
 import modalImage from '../../assets/img/modal-banner.webp'; // Imagem que será exibida no modal
+import MedalImage from '../../assets/img/medalha.webp'; // Adicione o ícone da medalha aqui
 
 const VideoCarousel = lazy(() => import('../../components/VideoCarousel'));
 const EventSchedule = lazy(() => import('../../components/EventSchedule'));
@@ -60,7 +61,10 @@ const EventPage = () => {
         <S.Button className='button-especial'>Garantir Vaga !</S.Button>
       </a>
       <S.Header>
+        <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
+        <S.MedalImage src={MedalImage} alt="Ícone de Medalha" />
         <img src={banner} alt="banner da página" loading="lazy" />
+        </a>
       </S.Header>
       <S.ImageContainer>
         <a href="https://pay.kiwify.com.br/Ak6CJ5R" target="_blank" rel="noopener noreferrer">
